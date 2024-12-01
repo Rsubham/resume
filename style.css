@@ -1,0 +1,371 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Poppins', Arial, sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+a {
+    color: #1d4ed8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2563eb;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    background-size: 200% 200%;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    animation: gradientAnimation 6s ease infinite;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+header p {
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    margin-top: -5px;
+}
+
+header a {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 3px 10px;
+    font-weight: bold;
+    color: #ffde7d;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #ffde7d;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+header a:hover {
+    background: #ffd073;
+    color: #2c2c2c;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* Main Section */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+}
+
+/* Section Styling */
+section {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: #1d4ed8;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #6366f1;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+    font-size: 1rem;
+}
+
+ul li::before {
+    content: "⦿";
+    color: #4f46e5;
+    position: absolute;
+    left: 0;
+    font-size: 0.8rem;
+}
+
+.project {
+    margin-bottom: 15px;
+}
+
+.project h3 {
+    font-size: 1.3rem;
+    color: #111;
+    margin-bottom: 5px;
+}
+
+.project p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Button Styling (Optional) */
+a.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+a.button:hover {
+    background: linear-gradient(135deg, #4f46e5, #3b82f6);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+    }
+
+    ul li {
+        font-size: 0.9rem;
+    }
+}
+
+/* Dark Mode Adjustments */
+
+/* When dark mode is activated */
+body.dark-mode {
+  background-color: #333;
+  color: #f9f9f9;
+}
+
+/* Header - Dark Mode */
+body.dark-mode header {
+  background: linear-gradient(135deg, #333, #1e1e1e);
+  color: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode header h1 {
+  color: #ffde7d; /* You can adjust the header title color for dark mode */
+}
+
+body.dark-mode header p {
+  color: #ccc;
+}
+
+body.dark-mode header a {
+  color: #ffde7d;
+  border: 2px solid #ffde7d;
+}
+
+body.dark-mode header a:hover {
+  background: #ffd073;
+  color: #2c2c2c;
+}
+
+/* Main Section - Dark Mode */
+body.dark-mode main {
+  background-color: #222;
+  color: #f9f9f9;
+}
+
+body.dark-mode section {
+  background-color: #444;
+  color: #f9f9f9;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode section:hover {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode section h2 {
+  color: #ffde7d;
+  border-bottom: 3px solid #ffde7d;
+}
+body.dark-mode section a {
+    color: #ffde7d;
+  }
+
+body.dark-mode ul li {
+  color: #ddd;
+}
+
+body.dark-mode ul li::before{
+    color: #ffde7d
+}
+
+body.dark-mode .project h3 {
+  color: #fff;
+}
+
+body.dark-mode .project p {
+    color: #fff;
+  }
+
+body.dark-mode footer {
+  color: #bbb;
+}
+
+body.dark-mode footer a.button {
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+}
+
+body.dark-mode footer a.button:hover {
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+}
+
+/* Modern Dark Mode Toggle Button */
+
+body .dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+body .dark-mode-toggle .icon {
+  color: #fff;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+body .dark-mode-toggle .icon.sun {
+  font-size: 20px;
+}
+
+body .dark-mode-toggle .icon.moon {
+  font-size: 20px;
+}
+
+body.dark-mode .dark-mode-toggle {
+  background-color: #444;
+}
+
+body.dark-mode .dark-mode-toggle .icon {
+  color: #fff;
+}
+
+body.dark-mode .dark-mode-toggle .icon.sun {
+    opacity: 0;
+    transform: scale(0);
+  }
+  
+  body.dark-mode .dark-mode-toggle .icon.moon {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Sun and Moon icons styles */
+  body .dark-mode-toggle .icon {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  body .dark-mode-toggle .icon.sun {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  body .dark-mode-toggle .icon.moon {
+    opacity: 0;
+    transform: scale(0);
+  }
+  
+  /* Dark Mode Body */
+  body.dark-mode {
+    background-color: #333;
+    color: #f9f9f9;
+  }
+  
